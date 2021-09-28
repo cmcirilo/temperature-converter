@@ -8,7 +8,9 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.87.0">
     <title>Temperature Converter</title>
-    
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sticky-footer-navbar/">
+
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -21,7 +23,6 @@
             -moz-user-select: none;
             user-select: none;
         }
-
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
@@ -56,11 +57,11 @@
                     </select>
                 </div>
                 <div class="mb-3 row">
-                    <label for="valorRef" class="form-label">Value:</label>
-                    <input type="number" class="form-control" id="valorRef" name="valorRef">
+                    <label for="valueRef" class="form-label">Value:</label>
+                    <input type="number" class="form-control" id="valueRef" name="valueRef">
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-primary mb-3">Converter</button>
+                    <button type="submit" class="btn btn-primary mb-3">Convert</button>
                 </div>
             </form>
             <% if(convertedValue){ %>

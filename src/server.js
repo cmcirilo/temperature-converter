@@ -11,17 +11,17 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.set('view engine', 'ejs');
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument)); 
 
-app.get('/fahrenheit/:valor/celsius', (req, res) => {
+app.get('/fahrenheit/:value/celsius', (req, res) => {
 
-    let valor = req.params.valor;
-    let celsius = conversor.fahrenheitCelsius(valor);
+    let value = req.params.value;
+    let celsius = conversor.fahrenheitCelsius(value);
     res.json({ "celsius": celsius, "maquina": os.hostname() });
 });
 
-app.get('/celsius/:valor/fahrenheit', (req, res) => {
+app.get('/celsius/:value/fahrenheit', (req, res) => {
 
-    let valor = req.params.valor;
-    let fahrenheit = conversor.celsiusFahrenheit(valor);
+    let value = req.params.value;
+    let fahrenheit = conversor.celsiusFahrenheit(value);
     res.json({ "fahrenheit": fahrenheit, "maquina": os.hostname() });
 });
 
@@ -33,11 +33,11 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
     let resultado = '';
 
-    if (req.body.valorRef) {
+    if (req.body.valueRef) {
         if (req.body.selectTemp == 1) {
-            resultado = conversor.celsiusFahrenheit(req.body.valorRef)
+            resultado = conversor.celsiusFahrenheit(req.body.valueRef)
         } else {
-            resultado = conversor.fahrenheitCelsius(req.body.valorRef)
+            resultado = conversor.fahrenheitCelsius(req.body.valueRef)
         }
     }
 
@@ -45,5 +45,5 @@ app.post('/', (req, res) => {
  });
 
 app.listen(8080, () => {
-    console.log("Servidor rodando na porta 8080");
+    console.log("Server is running in port 8080");
 });

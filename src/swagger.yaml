@@ -6,15 +6,15 @@ info:
   contact:
     email: "fabricio@kubedev.io"
 paths:
-  /fahrenheit/{valor}/celsius:
+  /fahrenheit/{value}/celsius:
     get:
       description: "Converte de Fahrenheit para Celsius"
       produces:
       - "application/json"
       parameters:
-      - name: "valor"
+      - name: "value"
         in: "path"
-        description: "Valor que será convertido"
+        description: "value que será convertido"
         required: true
         type: "number"
       responses:
@@ -27,15 +27,15 @@ paths:
         "400":
           description: "Bad Input Parameter"
 
-  /celsius/{valor}/fahrenheit:
+  /celsius/{value}/fahrenheit:
     get:
       description: "Converte de Celsius para Fahrenheit"
       produces:
       - "application/json"
       parameters:
-      - name: "valor"
+      - name: "value"
         in: "path"
-        description: "Valor que será convertido"
+        description: "value que será convertido"
         required: true
         type: "number"
       responses:
@@ -53,8 +53,8 @@ definitions:
   Temperatura:
     type: "object"
     required:
-    - "valor"
+    - "value"
     properties:
-      valor:
+      value:
         type: "number"
         example: 500.0
