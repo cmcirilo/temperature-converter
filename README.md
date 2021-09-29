@@ -14,23 +14,20 @@ git clone https://github.com/cmcirilo/temperature-converter.git
 
 ### Docker commands
 
-- Commands:
+- Container Commands:
 
-| Description      | Command                                          | Obs                                                                                     |
-| ---------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------- |
-| **create image** | `docker image build -t temperature-converter . ` | -t to name image <br /> . that is context or directory to send to daemon to build image |
+| Description          | Command                                                      | Obs                                                                |
+| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------ |
+| **run container**    | `docker container run -d -p 8080:8080 temperature-converter` | -d to indicate daemon<br /> -p to expose port                      |
+| **list containers**  | `docker container ls`                                        |                                                                    |
+| **remove container** | `docker container rm -f id_container`                        | rm to remove<br /> -f to force <br /> id_container is id container |
 
-```sh
-create image - docker image build -t temperature-converter . (-t to name image, . that is context or directory to send to daemon to build image)
+- Image Commands:
 
-list images - docker image ls
-
-run container - docker container run -d -p 8080:8080 temperature-converter (-d to indicate daemon, -p to expose port)
-
-list containers - docker container ls
-
-remove container - docker container rm -f container_id (rm to remove, -f to force)
-```
+| Description      | Command                                         | Obs                                                                                     |
+| ---------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------- |
+| **create image** | `docker image build -t temperature-converter .` | -t to name image <br /> . that is context or directory to send to daemon to build image |
+| **list images**  | `docker image ls`                               |                                                                                         |
 
 ## Help
 
