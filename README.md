@@ -16,8 +16,7 @@ git clone https://github.com/cmcirilo/temperature-converter.git
 
   | Description | Command | Obs |
   | ----------- | ------- | --- |
-  | create image | docker image build -t temperature-converter . | -t to name image \
-                                                                   . that is context or directory to send to daemon to build image |
+  | create image | docker image build -t temperature-converter . | -t to name image \ . that is context or directory to send to daemon to build image |
 
 ```sh
 create image - docker image build -t temperature-converter . (-t to name image, . that is context or directory to send to daemon to build image)
