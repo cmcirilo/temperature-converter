@@ -15,6 +15,7 @@ git clone https://github.com/cmcirilo/temperature-converter.git
  ### Docker commands
 
   | Description | Command | Obs |
+  | ----------- | ------- | --- |
   | create image | docker image build -t temperature-converter . | -t to name image, . that is context or directory to send to daemon to build image |
 
 ```sh
