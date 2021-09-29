@@ -1,22 +1,22 @@
 # Temperature Converter
 
-Developed with JS and using Node, Docker tecnologies 
+Developed with JS and using Node, Docker tecnologies
 
 ## Getting Started
 
- ### Repository
+### Repository
 
- - Clone the repository:
+- Clone the repository:
 
 ```sh
 git clone https://github.com/cmcirilo/temperature-converter.git
 ```
 
- ### Docker commands
+### Docker commands
 
-  | Description | Command | Obs |
-  | ----------- | ------- | --- |
-  | **create image** | docker image build -t temperature-converter . | -t to name image <br /> . that is context or directory to send to daemon to build image |
+| Description      | Command                                             | Obs                                                                                     |
+| ---------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| **create image** | `sh docker image build -t temperature-converter . ` | -t to name image <br /> . that is context or directory to send to daemon to build image |
 
 ```sh
 create image - docker image build -t temperature-converter . (-t to name image, . that is context or directory to send to daemon to build image)
@@ -29,7 +29,6 @@ list containers - docker container ls
 
 remove container - docker container rm -f container_id (rm to remove, -f to force)
 ```
-
 
 ## Help
 
