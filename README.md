@@ -16,11 +16,12 @@ git clone https://github.com/cmcirilo/temperature-converter.git
 
 - Container Commands:
 
-| Description          | Command                                                      | Obs                                                                |
-| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------ |
-| **run container**    | `docker container run -d -p 8080:8080 temperature-converter` | -d to indicate daemon<br /> -p to expose port                      |
-| **list containers**  | `docker container ls`                                        |                                                                    |
-| **remove container** | `docker container rm -f id_container`                        | rm to remove<br /> -f to force <br /> id_container is id container |
+| Description                 | Command                                                                                                | Obs                                                                                                                                                                                          |
+| --------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **run container**           | `docker container run -d -p 8080:8080 temperature-converter` <br /> `docker container run hello-world` | -d to indicate daemon<br /> -p to expose port <br /> if the container does not exist, it will be created, that is, the registry image will be downloaded and the container will be executed. |
+| **list running containers** | `docker container ls`                                                                                  |                                                                                                                                                                                              |
+| **list all containers**     | `docker container ls -a`                                                                               | -a to list all, that is, pending, running etc                                                                                                                                                |
+| **remove container**        | `docker container rm -f id_container`                                                                  | rm to remove<br /> -f to force <br /> id_container is id container                                                                                                                           |
 
 - Image Commands:
 
