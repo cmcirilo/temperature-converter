@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: web
+      image: cmcirilo/temperature-converter:v1
+      ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysecondpod
+  labels:
+    app: web
+spec:
+  containers:
+    - name: web
+      image: cmcirilo/temperature-converter:v1
+      ports:
+        - containerPort: 80

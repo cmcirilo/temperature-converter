@@ -34,10 +34,19 @@ git clone https://github.com/cmcirilo/temperature-converter.git
 
 - Image Commands:
 
-| Description      | Command                                         | Obs                                                                                     |
-| ---------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------- |
-| **create image** | `docker image build -t temperature-converter .` | -t to name image <br /> . that is context or directory to send to daemon to build image |
-| **list images**  | `docker image ls`                               |                                                                                         |
+| Description      | Command                                                     | Obs                                                                                     |
+| ---------------- | ----------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| **create image** | `docker image build -t cmcirilo/temperature-converter:v1 .` | -t to name image <br /> . that is context or directory to send to daemon to build image |
+| **list images**  | `docker image ls`                                           |                                                                                         |
+
+- Registry Commands:
+
+| Description        | Command                                                                               | Obs                  |
+| ------------------ | ------------------------------------------------------------------------------------- | -------------------- |
+| **login**          | `docker login`                                                                        |                      |
+| **push**           | `docker push cmcirilo/temperature-converter:v1`                                       |                      |
+| **versioning tag** | `docker tag cmcirilo/temperature-converter:v1 cmcirilo/temperature-converter:latest ` |                      |
+| **push latest**    | `docker push cmcirilo/temperature-converter:latest`                                   | it's a good practice |
 
 ## Help
 
